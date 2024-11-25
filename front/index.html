@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Recomendacao de CPUs</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendação de CPUs</title>
 </head>
 <body>
-    <h1>Sistema de Recomendacao de CPUs</h1>
-
+    <div>
+        <h1>Sistema de Recomendação de CPUs</h1>
+        <form action="/recommend" method="post">
+            <div>
+                <label for="price">Preço máximo (USD):</label>
+                <input type="number" id="price" name="price" required>
+            </div>
+            <div>
+                <label for="use">Uso principal:</label>
+                <select id="use" name="use" required>
+                    <option value="gaming">Jogos</option>
+                    <option value="editing">Edição</option>
+                    <option value="general">Uso Geral</option>
+                </select>
+            </div>
+            <button type="submit">Buscar CPUs</button>
+        </form>
+    </div>
 </body>
 </html>
